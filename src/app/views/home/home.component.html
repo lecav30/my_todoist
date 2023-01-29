@@ -1,0 +1,48 @@
+<mat-toolbar color="primary">
+  <button
+    mat-icon-button
+    aria-label="Menu icon to Todoist"
+    (click)="drawer.toggle()"
+  >
+    <mat-icon>menu</mat-icon>
+  </button>
+  <button mat-icon-button aria-label="Home icon to Todoist">
+    <mat-icon>home</mat-icon>
+  </button>
+  <span class="flex-auto"></span>
+  <button mat-icon-button aria-label="Add icon to Todoist">
+    <mat-icon>add</mat-icon>
+  </button>
+  <button mat-icon-button aria-label="Add icon to Todoist">
+    <mat-icon>notifications</mat-icon>
+  </button>
+  <button mat-icon-button aria-label="Add icon to Todoist">
+    <mat-icon>account_circle</mat-icon>
+  </button>
+</mat-toolbar>
+
+<mat-drawer-container class="h-full">
+  <mat-drawer #drawer mode="side" opened>
+    <section>
+      <mat-selection-list #byDate [multiple]="false">
+        <mat-list-option> Upcoming </mat-list-option>
+        <mat-list-option> Today </mat-list-option>
+      </mat-selection-list>
+    </section>
+    <mat-divider></mat-divider>
+    <br />
+    <section>
+      <h2>Projects</h2>
+      <mat-selection-list #byProject [multiple]="false">
+        <!-- <mat-list-option *ngFor="let project of projects" [value]="project"> -->
+        <!--   {{ project.name }} -->
+        <!-- </mat-list-option> -->
+      </mat-selection-list>
+    </section>
+  </mat-drawer>
+  <!-- <app-project -->
+  <!--   *ngIf="byProject.selectedOptions.hasValue()" -->
+  <!--   [project]="byProject.selectedOptions.selected[0].value" -->
+  <!-- ></app-project> -->
+  <div>Main</div>
+</mat-drawer-container>
