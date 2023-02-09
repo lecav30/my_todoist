@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProjectService } from 'src/app/service/project.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  projects: any;
+
+  constructor(private projectService: ProjectService) { }
 
   ngOnInit(): void {
+    this.projectService.getProjects().subscribe((response) => {
+      this.projects = response;
+    });
   }
 
 }

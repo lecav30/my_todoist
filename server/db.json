@@ -1,0 +1,26 @@
+{
+    "projects": [
+        {
+            "id": 1,
+            "name": "Project 1",
+            "description": "Project 1 description"
+        }
+    ],
+    "groups": [
+        {
+            "id": 1,
+            "name": "Group 1",
+            "description": "Group 1 description",
+            "project_id": 1
+        }
+    ],
+    "tasks": [
+        {
+            "id": 1,
+            "name": "Task 1",
+            "description": "Task 1 description",
+            "due_date": "2023-01-01",
+            "group_id": 1
+        }
+    ]
+}
