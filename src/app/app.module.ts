@@ -9,24 +9,29 @@ import { HttpClientModule } from '@angular/common/http';
 // Views
 import { HomeComponent } from './views/home/home.component';
 
+// Components
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { ProjectsComponent } from './components/projects/projects.component';
+
 // Angular Material
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatDividerModule } from '@angular/material/divider';
-import { NavbarComponent } from './components/navbar/navbar.component';
+
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    NavbarComponent
+    NavbarComponent,
+    ProjectsComponent
   ],
   imports: [
     BrowserModule,
