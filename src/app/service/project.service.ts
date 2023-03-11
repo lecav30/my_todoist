@@ -2,14 +2,14 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
-  providedIn: 'root',
+    providedIn: 'root',
 })
 export class ProjectService {
-  constructor(private http: HttpClient) {}
+    constructor(private http: HttpClient) {}
 
-  url = '/api/projects';
+    url = '/api/projects';
 
-  getProjects() {
-    return this.http.get(this.url);
-  }
+    getProjects() {
+        return this.http.get(this.url);
+    }
 }

@@ -4,16 +4,16 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
     providedIn: 'root',
 })
-export class GroupService {
+export class TaskService {
     constructor(private http: HttpClient) {}
 
-    url = '/api/groups';
+    url = '/api/tasks';
 
-    getGroups() {
+    getTasks() {
         return this.http.get(this.url);
     }
 
-    getGroupsByProjectId(projectId: number) {
-        return this.http.get(this.url + `?project_id=${projectId}`);
+    getTasksByGroupId(groupId: number) {
+        return this.http.get(this.url + `?group_id=${groupId}`);
     }
 }

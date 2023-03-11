@@ -25,13 +25,15 @@ import { MatListModule } from '@angular/material/list';
 import { MatDividerModule } from '@angular/material/divider';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { GroupsComponent } from './components/groups/groups.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     NavbarComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    GroupsComponent
   ],
   imports: [
     BrowserModule,

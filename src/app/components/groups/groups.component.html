@@ -1,0 +1,7 @@
+<h1>{{ group.name }}</h1>
+
+<mat-selection-list #byTask>
+  <mat-list-option *ngFor="let task of tasks" [value]="task">
+    {{ task.name }}
+  </mat-list-option>
+</mat-selection-list>

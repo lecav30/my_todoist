@@ -4,6 +4,11 @@
             "id": 1,
             "name": "Project 1",
             "description": "Project 1 description"
+        },
+        {
+            "id": 2,
+            "name": "Project 2",
+            "description": "Project 2 description"
         }
     ],
     "groups": [
@@ -12,6 +17,18 @@
             "name": "Group 1",
             "description": "Group 1 description",
             "project_id": 1
+        },
+        {
+            "id": 2,
+            "name": "Group 2",
+            "description": "Group 2 description",
+            "project_id": 1
+        },
+        {
+            "id": 3,
+            "name": "Group 3",
+            "description": "Group 3 description",
+            "project_id": 2
         }
     ],
     "tasks": [
@@ -21,6 +38,20 @@
             "description": "Task 1 description",
             "due_date": "2023-01-01",
             "group_id": 1
+        },
+        {
+            "id": 2,
+            "name": "Task 2",
+            "description": "Task 2 description",
+            "due_date": "2023-01-01",
+            "group_id": 1
+        },
+        {
+            "id": 3,
+            "name": "Task 3",
+            "description": "Task 3 description",
+            "due_date": "2023-01-01",
+            "group_id": 2
         }
     ]
 }

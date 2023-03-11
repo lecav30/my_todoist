@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input, OnInit, OnChanges } from '@angular/core';
 import { GroupService } from 'src/app/service/group.service';
 
 @Component({
@@ -10,12 +10,22 @@ export class ProjectsComponent {
   @Input() project: any;
   groups: any;
 
-  constructor(private groupService: GroupService) {}
+  constructor(private groupService: GroupService) { }
 
   ngOnInit(): void {
-    this.groupService.getGroups().subscribe((response) => {
-      this.groups = response;
-      console.log(this.groups);
-    });
+    this.getGroups();
+  }
+
+  ngOnChanges(): void {
+    this.getGroups();
+  }
+
+  getGroups():void {
+    this.groupService
+      .getGroupsByProjectId(this.project.id)
+      .subscribe((response) => {
+        this.groups = response;
+        console.log(this.groups);
+      });
   }
 }
