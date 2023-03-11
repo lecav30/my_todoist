@@ -1,1 +1,8 @@
-<p>projects works!</p>
+<h1>{{project.name}}</h1>
+
+<mat-selection-list #byGroup [multiple]="false">
+  <mat-list-option  *ngFor="let group in groups" [value]="group">
+    {{ group.name }} 
+  </mat-list-option>
+</mat-selection-list>
+

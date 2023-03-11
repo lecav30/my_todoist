@@ -18,8 +18,13 @@
       </mat-selection-list>
     </section>
   </mat-drawer>
-  <app-projects></app-projects>
-  <!--   *ngIf="byProject.selectedOptions.hasValue()" -->
-  <!--   [project]="byProject.selectedOptions.selected[0].value" -->
-  <!-- <div>Main</div> -->
+  <app-projects
+    *ngIf="byProject.selectedOptions.hasValue(); else notSelection"
+    [project]="byProject.selectedOptions.selected[0].value"
+    ></app-projects>
+  <ng-template #notSelection>
+    <h1>
+      There're not projects yet!
+    </h1>
+  </ng-template>
 </mat-drawer-container>
